@@ -27,6 +27,10 @@ function $_(_target) {
     _.scrollContent = false;
     _.openDelay = 0;
     _.closeDelay = 0;
+    _.beforeOpen = _config.beforeOpen;
+    _.afterOpen = _config.afterOpen;
+    _.beforeClose = _config.beforeClose;
+    _.afterClose = _config.afterClose;
   }
 
   popupBox.prototype.$ = function(_target) {

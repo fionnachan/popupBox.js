@@ -3,6 +3,8 @@ An extremely simple modal box / lightbox / popup box. No dependency. Supports IE
 
 [popupBox.js Demo on CodePen] (http://codepen.io/fionnachan/pen/EyGqbR)
 
+####Please use id but not class as the selector.
+
 <pre>$_('#popup1').init({
   'linkName' : '#tnc',
   'openDelay' : 300,

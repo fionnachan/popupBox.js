@@ -1,5 +1,5 @@
 # popupBox.js
-An extremely simple modal box / lightbox / popup box. No dependency. Supports IE8+.
+An extremely simple modal box / lightbox / popup box. No dependency. Supports IE10+.
 
 [popupBox.js Demo on CodePen] (http://codepen.io/fionnachan/pen/EyGqbR)
 

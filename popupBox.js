@@ -1,4 +1,4 @@
-// fSlider - v 0.1 - 2016-8-14
+// fSlider - v 0.1 - 2016-8-15
 // Copyright (c) 2016 Fionna Chan
 
 // Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,7 +23,7 @@ function $_(_target) {
   function popupBox(_target) {
     var _ = this;
     _.target = _target;
-    _.popLink = "";
+    _.linkName = "";
     _.scrollContent = false;
     _.openDelay = 0;
     _.closeDelay = 0;
@@ -33,22 +33,17 @@ function $_(_target) {
     _.afterClose = function(){};
   }
 
-  popupBox.prototype.$ = function(_target) {
-    return document.querySelector(_target);
+  popupBox.prototype.$ = function(tar) {
+    return document.querySelector(tar);
   };
 
   popupBox.prototype.init = function(_config) {
     var _ = this;
-    _.popLink = _config.linkName;
-    _.openDelay = _config.openDelay;
-    _.closeDelay = _config.closeDelay;
-    _.scrollContent = _config.scrollContent;
-    _.beforeOpen = _config.beforeOpen;
-    _.afterOpen = _config.afterOpen;
-    _.beforeClose = _config.beforeClose;
-    _.afterClose = _config.afterClose;
-
-    _.$(_.popLink).addEventListener("click", function() {
+    for (var prop in _config) {
+      _[prop] = _config[prop];
+    }
+    
+    _.$(_.linkName).addEventListener("click", function() {
       _.$('body').appendChild(_.$(_.target));
       _.beforeOpen();
       setTimeout(function() {
@@ -75,6 +70,5 @@ function $_(_target) {
       }, _.closeDelay);
     });
   };
-
   return new popupBox(_target);
 }

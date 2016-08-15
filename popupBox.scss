@@ -30,7 +30,9 @@ body.popup-show:before {
   }
   
   &.scroll {
-    max-height: 100vh;
+    -webkit-max-height: calc(100vh - 40px);
+    -moz-max-height: calc(100vh - 40px);
+    max-height: calc(100vh - 40px);
   }
   
   .popHead {

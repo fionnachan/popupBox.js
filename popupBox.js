@@ -54,8 +54,9 @@ function $_(_target) {
       var popupHeight = document.body.clientHeight;
       var popHeadHeight = _.$(_.target + ' .popHead').offsetHeight;
       var popMarginTop = _.$(_.target + ' .popHead').offsetTop;
+      var popPaddingTop = _.$(_.target + ' .popContent').offsetTop;
       _.$(_.target).classList.add('scroll');
-      _.$(_.target + ' .popContent').style.height = document.documentElement.clientHeight - popHeadHeight - popMarginTop*2 + 'px';
+      _.$(_.target + ' .popContent').style.height = document.documentElement.clientHeight - popHeadHeight - popMarginTop*2 - popPaddingTop + 'px';
     }
         _.afterOpen();
       }, _.openDelay);

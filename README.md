@@ -1,6 +1,7 @@
 # popupBox.js
 An extremely simple modal box / lightbox / popup box. No dependency. Supports IE10+.
 
+[popupBox.js Demo on fionnachan.github.io] (http://fionnachan.github.io/popupbox.html)
 [popupBox.js Demo on CodePen] (http://codepen.io/fionnachan/pen/EyGqbR)
 
 ####Please use id but not class as the selector.
